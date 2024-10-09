@@ -1,0 +1,26 @@
+<h1>Personajes de Harry Potter</h1>
+
+
+
+<table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #f4f4f4;">
+      <th>Nombre</th>
+      <th>Locación</th>
+      <th>Casa</th>
+      <th>Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %></td>
+        <td><%= character.location %></td>
+        <td><%= character.house %></td>
+        <td>
+          <%= image_tag "harry.jpg", alt: character.name, width: "100" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

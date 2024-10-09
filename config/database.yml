@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: howarts_rails_development
+  username: postgres
+  password: Duberly01
+  host: localhost
+
+test:
+  <<: *default
+  database: howarts_rails_test
+  username: postgres
+  password: Duberly01
+  host: localhost
+
+production:
+  <<: *default
+  database: howarts_rails_production
+  username: <%= ENV['postgres'] %>
+  password: <%= ENV['Duberly01'] %>
+  host: localhost
+

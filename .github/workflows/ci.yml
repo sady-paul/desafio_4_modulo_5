@@ -1,4 +1,7 @@
-name: CI
+- name: Establecer permisos de ejecución
+  run: chmod +x bin/brakeman
+
+
 
 on:
   pull_request:
